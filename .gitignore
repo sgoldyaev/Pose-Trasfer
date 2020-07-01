@@ -1,5 +1,5 @@
 checkpoints/
-fashion/
+fashion/**/
 fashion_data/**/
 results/
 env/
