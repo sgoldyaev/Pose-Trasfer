@@ -1,0 +1,6 @@
+checkpoints/
+fashion/
+fashion_data/**/
+results/
+env/
+.vscode/

@@ -17,6 +17,8 @@ class KeyDataset(BaseDataset):
         self.dir_P = os.path.join(opt.dataroot, opt.phase) #person images
         self.dir_K = os.path.join(opt.dataroot, opt.phase + 'K') #keypoints
 
+        print (self.dir_P, self.dir_K)
+
         self.init_categories(opt.pairLst)
         self.transform = get_transform(opt)
 
@@ -43,6 +45,7 @@ class KeyDataset(BaseDataset):
         P2_path = os.path.join(self.dir_P, P2_name) # person 2
         BP2_path = os.path.join(self.dir_K, P2_name + '.npy') # bone of person 2
 
+        print ('index:', index, 'P1_name:', P1_name, ', P2_name:', P2_name, 'BP1_path:', BP1_path, 'P2_path:', P2_path, 'BP2_path:', BP2_path)
 
         P1_img = Image.open(P1_path).convert('RGB')
         P2_img = Image.open(P2_path).convert('RGB')
